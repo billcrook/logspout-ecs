@@ -18,4 +18,6 @@ else
         SYSLOG_HOSTNAME=${SYSLOG_HOSTNAME}
 fi
 
+export SYSLOG_HOSTNAME
+
 /bin/logspout "$@"
