@@ -10,7 +10,9 @@ fi
 # append the instance ID to an already set syslog hostname
 if [ ! -z "$INST" ]; then
         if [ ! -z "$SYSLOG_HOSTNAME" ]; then
-                SYSLOG_HOSTNAME=${SYSLOG_HOSTNAME}_$INST
+            SYSLOG_HOSTNAME=${SYSLOG_HOSTNAME}_$INST
+        else
+            SYSLOG_HOSTNAME="${INST}"
         fi
 else
         SYSLOG_HOSTNAME=${SYSLOG_HOSTNAME}
